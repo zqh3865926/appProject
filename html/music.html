@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>小小孔亮可笑可笑</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+	<style>
+        .cd{
+            margin-top: 20px;
+            padding: 50px,0px;
+            text-align: center;
+        }
+		.cd img{
+
+            border-radius: 100%;
+		}
+        .aui-range{
+            margin: 0 auto;
+            width: 90%;
+        }
+        #btn{
+
+            margin:30px auto;
+            width:50%;
+        }
+	</style>
+</head>
+<body>
+    <header class="aui-bar aui-bar-nav aui-bar-danger">
+    <a class="aui-pull-left" onclick="goback()">
+        <span class="aui-iconfont aui-icon-left"></span>返回
+    </a>
+    <div class="aui-title">正在播放</div>
+</header>
+
+        <!--音乐盘 -->
+    	<div class="cd" >
+    		<img  src="../image/cd.jpg">
+    	</div>
+        <!--进度条-->
+        <div class="aui-range">
+            <input type="range" value="1" max="100" min="1" class="aui-range-primary demo" />
+        </div>
+
+        <!--按钮设计-->
+        <div id="btn">
+            <div class="aui-btn aui-btn-primary aui-btn-block">开始播放</div>
+            <div class="aui-btn aui-btn-danger aui-btn-block">停止播放</div>
+        </div>
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/aui.js"></script>
+<script type="text/javascript" src="../script/aui-range.js" ></script>
+<script type="text/javascript" src="../script/jQuery.js" ></script>
+<script type="text/javascript" src="../script/jQueryRotate.js" ></script>
+<script>
+    var angle = 0 ;
+    var dt =null;
+    function cdRO() {
+       if(dt!=null) {
+        clearInterval(dt);
+       }
+        dt = setInterval(function(){
+            angle += 3;
+            $('.cd img').rotate(angle);
+        }, 50)
+    }
+    function goback(){
+        api.closeWin({
+            name:'music'
+        });
+    }
+    cdRO();
+</script>
+</html>

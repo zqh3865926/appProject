@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width"/>
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>小小孔亮可笑可笑</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/aui.css" />
+	<style>
+
+	</style>
+</head>
+<body>
+    <div class="aui-content">
+		<ul class="aui-waterfall" id="aui-waterfall">
+
+		    <li onclick="openMusic()" >
+		        <div class="aui-waterfall-header">
+		            <img src="../image/fengjie.jpg" />
+		        </div>
+		       <div class="aui-waterfall-body">
+		            孔亮和凤姐搞笑瞬间
+		        </div>
+		        <div class="aui-waterfall-footer">
+		            <span class="aui-text-info">
+		                清华小鬼
+		            </span>
+		            <span class="aui-pull-right">
+		                <i class="aui-iconfont aui-icon-likefill aui-text-warning"></i>
+		            </span>
+		        </div>
+		    </li>
+
+		    <li onclick="openMusic()">
+		        <div class="aui-waterfall-header">
+		            <img src="../image/fengjie.jpg" />
+		        </div>
+		       <div class="aui-waterfall-body">
+		            孔亮情人
+		        </div>
+		        <div class="aui-waterfall-footer">
+		            <span class="aui-text-info">
+		                鲁证先锋
+		            </span>
+		            <span class="aui-pull-right">
+		                <i class="aui-iconfont aui-icon-likefill aui-text-warning"></i>
+		            </span>
+		        </div>
+		    </li>
+
+		    <li onclick="openMusic()">
+		        <div class="aui-waterfall-header">
+		            <img src="../image/1.png" />
+		        </div>
+		       <div class="aui-waterfall-body">
+		            十八水的天空
+		        </div>
+		        <div class="aui-waterfall-footer">
+		            <span class="aui-text-info">
+		                林志颖
+		            </span>
+		            <span class="aui-pull-right">
+		                <i class="aui-iconfont aui-icon-likefill aui-text-warning"></i>
+		            </span>
+		        </div>
+		    </li>
+
+		    <li onclick="openMusic()">
+		        <div class="aui-waterfall-header">
+		            <img src="../image/2.png" />
+		        </div>
+		       <div class="aui-waterfall-body">
+		            青藏高原
+		        </div>
+		        <div class="aui-waterfall-footer">
+		            <span class="aui-text-info">
+		                韩红
+		            </span>
+		            <span class="aui-pull-right">
+		                <i class="aui-iconfont aui-icon-likefill aui-text-warning"></i>
+		            </span>
+		        </div>
+		    </li>
+		</ul>
+	</div>
+
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript" src="../script/aui.js"></script>
+<script type="text/javascript" src="../script/aui-waterfall.js" ></script>
+<script type="text/javascript">
+$aui.waterfall($api.byId("aui-waterfall"),{
+    col:2,//列数
+    padding:10,//容器内边距
+    space:10//列间距
+});
+function openMusic(){
+	api.openWin({
+    name: 'music',
+    url: 'music.html',
+    pageParam: {
+        name: 'test'
+    }
+});
+}
+</script>
+</html>
